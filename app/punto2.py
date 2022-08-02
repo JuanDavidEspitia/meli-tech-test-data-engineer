@@ -9,7 +9,6 @@ pathDatos = glob.glob('/Users/JuanEspitia/Documents/Github/data-engineer/meli-te
 pathComplementos = glob.glob('/Users/JuanEspitia/Documents/Github/data-engineer/meli-tech-test-data-engineer/data/punto2/datos_complementos/*.csv')
 print("File List Path1: " + str(pathDatos))
 print("File List Path2: " + str(pathComplementos))
-list_data = []
 
 # Ahora creamos una funcion que se encargue de leer los archivos para cada carpeta
 print("Function Load Files")
@@ -49,7 +48,6 @@ print(dfWithoutDuplicates)
 # Procedemos a concatenar el tipo y numero de cedula
 print("Concat columns tipo_identificacion and numero_identificacion")
 dfWithoutDuplicates['tipo_numero_identificacion'] = dfWithoutDuplicates['tipo_identificacion']+''+dfWithoutDuplicates['numero_identificacion'].apply(str)
-#dfWithoutDuplicates['TIPO_NUMERO_IDENTIFICACION'] = dfWithoutDuplicates['tipo_identificacion']+dfWithoutDuplicates['numero_identificacion'].astype(str)
 print(dfWithoutDuplicates)
 
 # Procedemos a crear el campo hash para la tupla
